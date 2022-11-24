@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import socket from "../socket";
-import { studentJoined, studentLeft } from "../store/classroom";
+import {studentLeft, studentJoin} from "../store/classroomSlice";
 import VideoChat from "./VideoChat";
 // import { useParams } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Classroom = () => {
 
   useEffect(() => {
     socket.emit("student-joined", username);
-    dispatch(studentJoined(username));
+    dispatch(studentJoin(username));
     return () => {
       socket.emit("student-left", username);
       dispatch(studentLeft(username));
