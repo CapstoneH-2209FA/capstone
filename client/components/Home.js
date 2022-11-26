@@ -5,6 +5,8 @@ import styled from "styled-components";
 import socket from "../socket";
 import Classroom from "./Classroom";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
 
 /**
  * COMPONENT
@@ -13,7 +15,9 @@ import { Link } from "react-router-dom";
 const dummyClasses = ["Fullstack Academy", "History", "Math"];
 
 export const Home = (props) => {
-  const { username } = props;
+  const { username } = useSelector((state) => state.auth);
+
+  // const { username } = props;
   console.log("socket", socket);
   socket.emit("new-message", `${username} is connected to the socket`);
 

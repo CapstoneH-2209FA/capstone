@@ -11,13 +11,13 @@ export const classroomSlice = createSlice({
   initialState,
   reducers:{
     studentLeft: (state, {payload})=>{
-      return [...state.students].filter(
+      state.students = state.students.filter(
         (s) => s !== payload
       );
-      return { ...state, students: newStudentList };
     },
     studentJoin: (state, {payload})=>{
-      return { ...state, students: [...state.students, payload] };
+      debugger
+      state.students.push(payload) ;
     }
 
     }
