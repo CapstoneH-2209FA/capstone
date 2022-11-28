@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import socket from "../socket";
 import {studentLeft, studentJoin} from "../store/classroomSlice";
 import VideoChat from "./VideoChat";
+import Chat from './Chat'
 // import { useParams } from "react-router-dom";
 
 const Classroom = () => {
@@ -24,6 +25,7 @@ const Classroom = () => {
     <div>
       {JSON.stringify(students)}
       <VideoChat />
+      <Chat style={{marginTop:"100px"}}/>
     </div>
   );
 };

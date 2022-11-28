@@ -15,6 +15,15 @@ module.exports = (io) => {
       socket.broadcast.emit("student-left", student);
     });
 
+    socket.on("message", (message) => {
+      console.log(message);
+      socket.broadcast.emit("message", message);
+    })
+    //=============================================
+    socket.on("send_message", (data) => {
+      socket.emit("receive_message", data);
+      console.log(data)
+    });
     // socket.on("new-channel", (channel) => {
     //   socket.broadcast.emit("new-channel", channel);
     // });
