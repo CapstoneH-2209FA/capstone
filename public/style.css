@@ -14,86 +14,8 @@ nav a {
   display: inline-block;
   margin: 1em;
 }
-.invite{
-  float: right;
-}
 
 form div {
   margin: 1em;
   display: inline-block;
 }
-.footer-container{
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-
-}
-.footer{
-  margin-top: auto;
-  color: rgb(252, 254, 255);
-  background-color: rgb(23, 23, 96);
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px 0;
-  font-size: 12px;
-}
-
-.modalBackground {
-  width: 100vw;
-  height: 100vh;
-  /* position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-.modalContainer {
-  margin-bottom: 100em;
-  margin-right: 60%;
-  width: 500px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-
-  transform: translate(-134%, 13%);
-  border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-}
-
-.modalContainer .title {
-  color: rgb(39, 36, 36);
-  display: inline-block;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.titleCloseBtn {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.titleCloseBtn button {
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.modalContainer .body {
-  flex: 50%;
-  color: rgb(39, 36, 36);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
-  text-align: center;
-}
-
-
-
-

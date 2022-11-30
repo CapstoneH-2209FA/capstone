@@ -13,7 +13,7 @@ function Footer() {
       <div >
 
             <div>
-              <p><FaRegCopyright /> Copyright 2022, --NameOfProduct--</p>
+              <p><FaRegCopyright /> Copyright 2022</p>
             </div>
             <div>
               <p className='icon'>About us:
