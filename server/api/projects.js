@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const {
-  models: { Project, UserProjects, User, List, Card, },
+  models: { Project, UserProjects, User, List, Card },
 } = require("../db");
 
 module.exports = router;
@@ -61,9 +61,13 @@ const createProject = async (req, res, next) => {
 
 const getSingleProject = async (req, res, next) => {
   try {
-    const userProject = await UserProjects.findOne({where: { projectId: req.params.projectId }})
-    const project = await Project.findByPk(
-      req.params.projectId, {include: User, where: { userId: userProject.userId}});
+    const userProject = await UserProjects.findOne({
+      where: { projectId: req.params.projectId },
+    });
+    const project = await Project.findByPk(req.params.projectId, {
+      include: User,
+      where: { userId: userProject.userId },
+    });
     res.send(project);
   } catch (err) {
     next(err);

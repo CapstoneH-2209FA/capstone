@@ -8,17 +8,12 @@ import SingleCard from "./SingleCard";
 import { fetchCards } from "../store/cardSlice";
 
 function List(props) {
-  const { title, listid, cards } = props;
+  const { title, listid } = props;
   const dispatch = useDispatch();
   const params = useParams();
-  // const cards = useSelector((state) => state.cards);
-  
-  // const filterCards = cards.filter((item) => item.listId === listid);
-  
-  useEffect(() => {
-    dispatch(fetchCards(params.projectId));
-    console.log('list.cards', cards)
-  }, [cards]);
+  const cards = useSelector((state) => state.cards);
+
+  const filterCards = cards.filter((item) => item.listId === listid);
 
   return (
     <Droppable droppableId={listid.toString()}>
@@ -30,8 +25,8 @@ function List(props) {
         >
           <h4>{title}</h4>
 
-          {cards &&
-            cards.map((card, index) => (
+          {filterCards &&
+            filterCards.map((card, index) => (
               <SingleCard
                 key={card.id}
                 cardId={card.id}

@@ -96,7 +96,7 @@ function Project() {
         })
       );
       dispatch(updateList(arrayOfObj));
-      // dispatch(updateCards(newCard
+      // dispatch(updateCards(newCardIds));
       // console.log("AFTER SETSTATE >>>>", state);
       // }
       return;

@@ -25,8 +25,9 @@ router.get("/:projectId", requireToken, async (req, res, next) => {
     const cards = await Card.findAll({
       include: [
         { model: List, where: { projectId: project.id } },
-        { model: User, }
+        { model: User },
       ],
+      order: [["cardindex", "ASC"]],
     });
     res.json(cards);
   } catch (error) {
@@ -80,10 +81,11 @@ router.put("/", requireToken, async (req, res, next) => {
     const card = await Card.update(
       { title: req.body.title, description: req.body.description },
       {
-        where: { id: req.body.cardId, },
+        where: { id: req.body.cardId },
       }
     );
-    res.json(card);
+    const allCards = await Card.findAll();
+    res.json(allCards);
   } catch (error) {
     next(error);
   }
@@ -115,7 +117,14 @@ router.put("/cardIndex", requireToken, async (req, res, next) => {
         { cardindex: req.body.finishingIndex },
         { where: { id: req.body.cardDragId } }
       );
-      res.json(movingCard);
+      const cards = await Card.findAll({
+        include: [{ model: List }],
+        order: [
+          ["listId", "ASC"],
+          ["cardindex", "ASC"],
+        ],
+      });
+      res.json(cards);
     }
     if (theDifference > 0) {
       for (
@@ -137,7 +146,14 @@ router.put("/cardIndex", requireToken, async (req, res, next) => {
         { cardindex: req.body.finishingIndex },
         { where: { id: req.body.cardDragId } }
       );
-      res.json(movingCard);
+      const cards = await Card.findAll({
+        include: [{ model: List }],
+        order: [
+          ["listId", "ASC"],
+          ["cardindex", "ASC"],
+        ],
+      });
+      res.json(cards);
     }
   } catch (error) {
     next(error);
