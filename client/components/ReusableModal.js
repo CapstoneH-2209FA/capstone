@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import MUIModal from "@mui/material/Modal";
 import styled from "styled-components";
+
 import { toggleModal } from "../store/uiSlice";
 
 const ReusableModal = ({ children, modalName }) => {

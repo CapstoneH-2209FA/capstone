@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import TextareaAutosize from "react-textarea-autosize";
 
@@ -12,6 +12,7 @@ const CardModal = () => {
   const { selectedCard } = useSelector((state) => state.ui)
   const selectedProject = useSelector((state) => state.project.selectedProject)
   const projectUsers = selectedProject.users
+  console.log('selectedCard.users', selectedCard.users)
   
   useEffect(() => {
     setFormVals(selectedCard)

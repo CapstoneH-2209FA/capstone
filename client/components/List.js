@@ -12,12 +12,13 @@ function List(props) {
   const dispatch = useDispatch();
   const params = useParams();
   // const cards = useSelector((state) => state.cards);
-
+  
   // const filterCards = cards.filter((item) => item.listId === listid);
-
-  // useEffect(() => {
-  //   dispatch(fetchCards(params.projectId));
-  // }, [cards]);
+  
+  useEffect(() => {
+    dispatch(fetchCards(params.projectId));
+    console.log('list.cards', cards)
+  }, [cards]);
 
   return (
     <Droppable droppableId={listid.toString()}>
@@ -37,6 +38,7 @@ function List(props) {
                 title={card.title}
                 description={card.description}
                 index={index}
+                users={card.users}
               />
             ))}
           {provided.placeholder}

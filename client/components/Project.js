@@ -125,7 +125,7 @@ function Project() {
     // console.log("the index", index);
     // newCardIds.splice(index, 1);
   };
-  console.log("THE LIST FROM REDUX", lists);
+  // console.log("THE LIST FROM REDUX", lists);
   // console.log("THE LIST FROM STATE", state);
 
   return (
