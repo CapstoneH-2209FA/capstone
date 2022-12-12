@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import AddSingleCard from "./AddSingleCard";
 import SingleCard from "./SingleCard";
 import "../styles/list.css";
+
 function List(props) {
   const { title, listid, index, listHashId } = props;
   const cards = useSelector((state) => state.cards);

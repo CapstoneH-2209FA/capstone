@@ -33,7 +33,7 @@ export const fetchMessages = createAsyncThunk(
 const initialState = {
   online: [],
   messageList: [],
-  dbMessages: [],
+  messagesNumber: 0,
 };
 
 const chatSlice = createSlice({
@@ -55,6 +55,12 @@ const chatSlice = createSlice({
     allMessages: (state, action) => {
       state.messageList = action.payload;
     },
+    resetCounter: (state) => {
+      state.messagesNumber = 0;
+    },
+    incrementMessageCounter: (state) => {
+      state.messagesNumber = state.messagesNumber + 1;
+    },
   },
 });
 
@@ -64,5 +70,7 @@ export const {
   sentMessage,
   receiveMessage,
   allMessages,
+  resetCounter,
+  incrementMessageCounter,
 } = chatSlice.actions;
 export default chatSlice.reducer;

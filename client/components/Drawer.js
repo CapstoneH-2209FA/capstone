@@ -21,6 +21,7 @@ import CopyLinkModal from "./CopyLinkModal";
 import { useParams } from "react-router-dom";
 import { toggleModal } from "../store/uiSlice";
 import { useDispatch } from "react-redux";
+import { resetCounter } from "../store/chatSlice";
 
 export default function TemporaryDrawer({ setMessageCounter }) {
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ export default function TemporaryDrawer({ setMessageCounter }) {
       return;
     }
 
-    setMessageCounter(0);
+    dispatch(resetCounter());
 
     setState({ ...state, [anchor]: open });
   };

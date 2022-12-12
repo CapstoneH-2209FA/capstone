@@ -24,8 +24,7 @@ import {
 } from "../store/cardSlice";
 import "../styles/Project.css";
 import socket from "../socket";
-import { toggleModal } from "../store/uiSlice";
-
+import { incrementMessageCounter } from "../store/chatSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -37,11 +36,8 @@ function Project() {
   const lists = useSelector((state) => state.lists);
   const projects = useSelector((state) => state.project);
   const cards = useSelector((state) => state.cards);
-  const { modalIsOpen } = useSelector((state) => state.ui);
-  const { messageList } = useSelector((state) => state.chat);
-
+  const { messagesNumber } = useSelector((state) => state.chat);
   const params = useParams();
-  const [messageCounter, setMessageCounter] = useState(0);
 
   useEffect(() => {
     dispatch(fetchProjects());
@@ -54,13 +50,12 @@ function Project() {
       projectId: +params.projectId,
     });
   }, [params.projectId]);
-  //todo
-  let num = messageCounter;
+
   useEffect(() => {
     socket.on("receive_message", () => {
-      num += 1;
 
-      setMessageCounter(num);
+      dispatch(incrementMessageCounter());
+
     });
   }, [socket]);
 
@@ -159,10 +154,10 @@ function Project() {
 
       <ToastContainer />
       <div className="Drawer-Title">
-        <span className={messageCounter ? "unread" : ""}>
-          {messageCounter === 0 ? "" : messageCounter}
+        <span className={messagesNumber ? "unread" : ""}>
+          {messagesNumber === 0 ? "" : messagesNumber}
         </span>
-        <Drawer setMessageCounter={setMessageCounter} />
+        <Drawer />
         <div className="Title">
           <h2>{projects.selectedProject?.title}</h2>
         </div>

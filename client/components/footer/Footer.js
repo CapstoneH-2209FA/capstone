@@ -14,7 +14,9 @@ function Footer() {
       <TeamMemberModal modalName="footer" member={member} />
       <FaRegCopyright /> Copyright 2022 : Workflo
       <PhotoBox>
+
         {["mattB", "jerral", "erik", "peter"].map((memb) => {
+
           return (
             <img
               key={memb}
