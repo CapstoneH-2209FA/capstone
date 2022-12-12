@@ -59,6 +59,7 @@ function Project() {
   useEffect(() => {
     socket.on("receive_message", () => {
       num += 1;
+
       setMessageCounter(num);
     });
   }, [socket]);

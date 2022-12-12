@@ -55,7 +55,9 @@ export default function TemporaryDrawer({ setMessageCounter }) {
     ) {
       return;
     }
+
     setMessageCounter(0);
+
     setState({ ...state, [anchor]: open });
   };
 
@@ -113,7 +115,7 @@ export default function TemporaryDrawer({ setMessageCounter }) {
         >
           {users?.map((user, index) => (
             <ListItem key={user.id} disablePadding>
-              <ListItemButton >
+              <ListItemButton>
                 <ListItemText primary={user.firstName} />
                 <div
                   style={{
@@ -136,7 +138,7 @@ export default function TemporaryDrawer({ setMessageCounter }) {
             style={{ width: "100%" }}
             onClick={toggleChat}
             variant="contained"
-            sx={{ fontFamily: "Ubutu"}}
+            sx={{ fontFamily: "Ubutu" }}
           >
             Chat
           </Button>

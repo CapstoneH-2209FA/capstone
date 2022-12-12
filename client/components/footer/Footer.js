@@ -7,14 +7,14 @@ import TeamMemberModal from "./TeamMemberModal";
 
 function Footer() {
   const dispatch = useDispatch();
-  const [member, setMember] = useState("matt");
+  const [member, setMember] = useState("mattB");
 
   return (
     <Container>
       <TeamMemberModal modalName="footer" member={member} />
       <FaRegCopyright /> Copyright 2022 : Workflo
       <PhotoBox>
-        {["matt", "jerral", "erik", "peter"].map((memb) => {
+        {["mattB", "jerral", "erik", "peter"].map((memb) => {
           return (
             <img
               key={memb}
