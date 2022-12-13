@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { createList } from "../store/listSlice";
+import { createList, fetchLists } from "../store/listSlice";
 import "../styles/Board.css";
 import "../styles/AddList.css";
 

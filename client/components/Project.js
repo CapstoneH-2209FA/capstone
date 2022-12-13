@@ -94,8 +94,10 @@ function Project() {
       (item) => item.listHashId === destination.droppableId
     );
     const [aCardDrag] = cards.filter((item) => item.cardHashId === draggableId);
+    dispatch(fetchLists(params.projectId));
 
     if (startingList.id === finishingList.id) {
+      console.log("STARTING LIST >>>>", startingList);
       const newCardIds = startingList.cards.map((item) => item);
 
       newCardIds.splice(source.index, 1);
