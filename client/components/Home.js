@@ -111,6 +111,7 @@ export const Home = () => {
             {userProjects?.length &&
               userProjects?.map((project) => (
                 <Grid
+                  item
                   xs={9}
                   sm={4}
                   className={classes.container}

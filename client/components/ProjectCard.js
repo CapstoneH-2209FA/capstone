@@ -95,12 +95,6 @@ const ProjectCard = (props) => {
             ))}
           </AssigneeBox>
         </CardContent>
-          {/* <Typography sx={{ fontFamily: "Ubutu", fontSize: 18 }}>
-            <span>{"Created at "}</span>
-            <span>{time}</span>
-            <span>{" on "}</span>
-            <span>{date}</span>
-          </Typography> */}
         <CardActions disableSpacing></CardActions>
       </Card>
     </Link>

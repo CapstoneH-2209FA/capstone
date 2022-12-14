@@ -17,7 +17,7 @@ const users = [
   },
   {
     firstName: "Matt",
-    lastName: "Brown",
+    lastName: "Bruer",
     email: "matt@matt.com",
     password: "123",
     isAdmin: false,
@@ -253,10 +253,10 @@ const seeduserCards = [
     userId: 4,
     cardId: 4,
   },
-  {
-    userId: 5,
-    cardId: 5,
-  },
+  // {
+  //   userId: 5,
+  //   cardId: 5,
+  // },
   {
     userId: 6,
     cardId: 6,
@@ -265,10 +265,10 @@ const seeduserCards = [
     userId: 4,
     cardId: 7,
   },
-  {
-    userId: 5,
-    cardId: 8,
-  },
+  // {
+  //   userId: 5,
+  //   cardId: 8,
+  // },
   {
     userId: 6,
     cardId: 9,
@@ -290,10 +290,10 @@ const seeduserCards = [
     userId: 4,
     cardId: 13,
   },
-  {
-    userId: 5,
-    cardId: 14,
-  },
+  // {
+  //   userId: 5,
+  //   cardId: 14,
+  // },
   {
     userId: 6,
     cardId: 15,
@@ -302,10 +302,10 @@ const seeduserCards = [
     userId: 4,
     cardId: 16,
   },
-  {
-    userId: 5,
-    cardId: 17,
-  },
+  // {
+  //   userId: 5,
+  //   cardId: 17,
+  // },
   {
     userId: 6,
     cardId: 18,
@@ -329,10 +329,10 @@ const seeduserProjects = [
     userId: 4,
     projectId: 1,
   },
-  {
-    userId: 5,
-    projectId: 1,
-  },
+  // {
+  //   userId: 5,
+  //   projectId: 1,
+  // },
   {
     userId: 6,
     projectId: 1,
@@ -354,10 +354,10 @@ const seeduserProjects = [
     userId: 4,
     projectId: 2,
   },
-  {
-    userId: 5,
-    projectId: 2,
-  },
+  // {
+  //   userId: 5,
+  //   projectId: 2,
+  // },
   {
     userId: 6,
     projectId: 2,

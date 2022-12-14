@@ -19,6 +19,8 @@ const ReusableModal = ({ children, modalName }) => {
   };
 
   const style = {
+    display: "flex",
+    justifyContent: "center",
     position: "absolute",
     top: "50%",
     left: "50%",

@@ -63,7 +63,6 @@ const CardModalNew = () => {
   const handleClose = () => {
     dispatch(updateCard({ title: cardVals.title, description: cardVals.description, id: cardId, }));
     dispatch(fetchCards(selectedProject.id));
-    // set
     dispatch(toggleModal("card"));
   };
 

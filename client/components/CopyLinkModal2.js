@@ -43,22 +43,35 @@ const CopyLinkModal2 = () => {
 
   return (
     <ReusableModal modalName="copyLink">
-      <div className="title">
-        <h1>Invite</h1>
-      </div>
-      <div className="body">
-        <input value={window.location.href} onChange={handleChange} />
+      <div style={styles.container}>
+        <div >
+          <h1 style={styles.invite}>Invite a New Member</h1>
+        </div>
+        <div className="body">
+          <input value={window.location.href} onChange={handleChange} />
 
-        <Tooltip title="Copy">
-          <button onClick={handleCopy} disabled={disable}>
-            <FaCopy />
-          </button>
-        </Tooltip>
+          <Tooltip title="Copy">
+            <button onClick={handleCopy} disabled={disable}>
+              <FaCopy />
+            </button>
+          </Tooltip>
+        </div>
       </div>
-      {/* </div>
-      </div> */}
     </ReusableModal>
   );
 };
 
 export default CopyLinkModal2;
+
+const styles = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "10",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  invite: {
+    color: "#1975d2"
+  }
+}
