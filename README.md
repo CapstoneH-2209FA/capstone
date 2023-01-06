@@ -1,5 +1,5 @@
 # WorkFlo
-![alt text](https://imgur.com/1WVwdEF)
+![alt text](https://imgur.com/1WVwdEF?raw=true)
 
 ## About
 
