@@ -1,21 +1,11 @@
-# FS-App-Template
+# WorkFlo
+![alt text](https://github.com/CapstoneH-2209FA/WorkFlo/blob/main/public/images/ProjectIcon/WF.jpg?raw=true)
 
-## Setup
+## About
 
-To use this as boilerplate, you'll need to take the following steps:
+WorkFlo is a project management web application that allows the user to collaborate with others during the project development phase. The web app offers a drag and drop feature which improves the users experience through its effortless organization performance and functionality. WorkFlo offers a set of tools that optimizes coordination including real-time chat and leveraging the Excalidraw website.
 
-* Don't fork or clone this repo! Instead, create a new, empty
-  directory on your machine and `git init` (or create an empty repo on
-  Github and clone it to your local machine)
-
-* Now you will have to add the fs-app-template as a remote and merge it into your own repository.
-
-```
-git remote add boilermaker git@github.com:FullstackAcademy/fs-app-template.git
-git fetch boilermaker
-git merge boilermaker/main
-git branch -m master main
-```
+We built this web app to help organize the initial phase of project production by keeping all of the architectural references in one single place. We wanted to make the development process easier to navigate by avoiding flipping through multiple websites for different pieces of information.
 
 ## Customize
 
