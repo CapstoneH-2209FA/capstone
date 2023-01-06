@@ -8,8 +8,6 @@ We built this web app to help organize the initial phase of project production b
 
 https://workflo.onrender.com/
 
-https://www.youtube.com/watch?v=T0LIV733ef4&list=PLx0iOsdUOUmmSWuD08FQvGO9KW5fw6Z9z&index=15
-
 ## Project View
 <img width="1440" alt="Screenshot 2023-01-06 at 11 47 29 AM" src="https://user-images.githubusercontent.com/85711028/211088248-84e45217-3191-4ac4-b2b6-50c2f206569b.png">
 
