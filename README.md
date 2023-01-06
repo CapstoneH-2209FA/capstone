@@ -1,5 +1,5 @@
 # WorkFlo
-<img width="337" alt="Screenshot 2023-01-06 at 11 39 55 AM" src="https://user-images.githubusercontent.com/85711028/211087429-5324b4cf-9c6a-442d-b9ea-7332b1acecd5.png">
+<img width="369" alt="Screenshot 2023-01-06 at 11 43 22 AM" src="https://user-images.githubusercontent.com/85711028/211087560-8f4b22e5-2c3d-464a-9a97-ecb3aaa6099c.png">
 
 ## About
 
