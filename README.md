@@ -1,5 +1,5 @@
 # WorkFlo
-![alt text](https://github.com/CapstoneH-2209FA/WorkFlo/blob/main/public/images/ProjectIcon/WF.jpg?raw=true)
+![alt text](https://imgur.com/1WVwdEF)
 
 ## About
 
